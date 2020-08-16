@@ -14,4 +14,6 @@
 
 1. `./proxy.sh`
 
-## 2: 
+## 2: Install foundry
+
+1. `./foundry.sh`
