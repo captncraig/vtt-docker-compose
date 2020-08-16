@@ -9,8 +9,11 @@ docker run \
   --name foundry \
   --env FOUNDRY_USERNAME=$FOUNDRY_USER \
   --env FOUNDRY_PASSWORD=$FOUNDRY_PASS \
-  --env "VIRTUAL_HOST=vtt.captncraig.io" \
-  --env "LETSENCRYPT_HOST=vtt.captncraig.io" \
+  --env VIRTUAL_HOST=vtt.captncraig.io \
+  --env LETSENCRYPT_HOST=vtt.captncraig.io \
+  --env FOUNDRY_HOSTNAME=vtt.captncraig.io \
+  --env FOUNDRY_PROXY_SSL=true \
+  --env FOUNDRY_VERSION=0.6.5 \
   --publish 30000:30000/tcp \
   --volume /data:`pwd`/data \
   felddy/foundryvtt:release
