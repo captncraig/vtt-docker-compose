@@ -17,5 +17,5 @@ docker run \
   --env FOUNDRY_PROXY_SSL=true \
   --env FOUNDRY_VERSION=0.6.5 \
   --publish 30000:30000/tcp \
-  --volume /data:`pwd`/data \
+  --volume `pwd`/data:/data \
   felddy/foundryvtt:release
