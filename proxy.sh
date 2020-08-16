@@ -14,9 +14,11 @@ docker run --detach \
 
 docker stop nginx-proxy-letsencrypt || true && docker rm nginx-proxy-letsencrypt || true
 
+source .env
+
 docker run --detach \
     --name nginx-proxy-letsencrypt \
     --volumes-from nginx-proxy \
     --volume /var/run/docker.sock:/var/run/docker.sock:ro \
-    --env "DEFAULT_EMAIL=mail@yourdomain.tld" \
+    --env "DEFAULT_EMAIL=$EMAIL" \
     jrcs/letsencrypt-nginx-proxy-companion
