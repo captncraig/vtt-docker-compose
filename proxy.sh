@@ -9,6 +9,7 @@ docker run --detach \
     --volume /etc/nginx/certs \
     --volume /etc/nginx/vhost.d \
     --volume /usr/share/nginx/html \
+    --volume `pwd`/nginx/custom.conf:/etc/nginx/conf.d/custom.conf \
     --volume /var/run/docker.sock:/tmp/docker.sock:ro \
     jwilder/nginx-proxy
 
